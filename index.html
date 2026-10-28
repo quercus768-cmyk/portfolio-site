@@ -7,8 +7,17 @@
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-cvetok-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-cvetok-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon-cvetok.png">
-<title>Ольга Сазанова — сайты на Tilda и на коде, презентации и нейровидео для экспертов</title>
+<title>Сайты на Tilda и на коде, презентации и нейровидео для экспертов</title>
 <meta name="description" content="Создаю сайты на Tilda и на коде, презентации и нейровидео для экспертов и малого бизнеса. От структуры и смыслов до готового проекта. Смотрите работы и пишите в Telegram.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Сайты на Tilda и на коде, презентации и нейровидео для экспертов">
+<meta property="og:description" content="Создаю сайты на Tilda и на коде, презентации и нейровидео для экспертов и малого бизнеса. От структуры и смыслов до готового проекта. Смотрите работы и пишите в Telegram.">
+<meta property="og:url" content="https://quercus768-cmyk.github.io/portfolio-site/">
+<meta property="og:image" content="https://quercus768-cmyk.github.io/portfolio-site/img/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Ysabeau+Infant:wght@400;500;600;700&family=Ysabeau+Office:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -41,7 +50,7 @@ body{font-family:"Ysabeau Office",system-ui,sans-serif;font-weight:400;font-size
     radial-gradient(45% 50% at 6% 92%,rgba(255,255,255,.75),rgba(255,255,255,0) 65%),
     linear-gradient(135deg,var(--p-1) 0,var(--p-2) 48%,var(--p-3) 100%);
   background-attachment:fixed}
-/* оригинальный фон обложки, слегка размыт заранее ((фон главного экрана)), внизу плавно переходит в фон сайта */
+/* оригинальный фон обложки, слегка размыт заранее (img/фон-главный-размытый.webp), внизу плавно переходит в фон сайта */
 body{position:relative}
 body::before{content:"";position:absolute;top:0;left:0;right:0;height:max(100vh,900px);z-index:-1;pointer-events:none;
   background:linear-gradient(rgba(240,243,252,.35),rgba(240,243,252,.35)),url("img/fon-pervyy-ekran-moroz.webp") center top/cover no-repeat;
@@ -118,6 +127,8 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
   .hero-text{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}
   .hero-text>*{margin-top:0;margin-bottom:0}
   .hero-text h1{margin:0}
+  .hero .wrap{pointer-events:none}
+  .hero-text>*{pointer-events:auto}
 }
 @media(max-width:1180px){nav{display:none}}
 @media(max-width:900px){
@@ -502,7 +513,8 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 @media(max-width:560px){.ct-lk{flex-wrap:wrap;gap:4px 18px}}
 /* КОНТАКТЫ · вариант И: светлая картинка (GPT), текст настоящий */
 .ct{color:var(--c1);background:#F0F3FC;min-height:clamp(560px,50vw,820px)}
-.ct::before{background:url(img/kontakty-fon-3.webp) 50% center/cover no-repeat}
+.ct::before{background:none 50% center/cover no-repeat}
+.ct.ld::before{background-image:url(img/kontakty-fon-3.webp)}
 .ct-fr{display:none}
 .ct::after{background:linear-gradient(90deg,rgba(240,243,252,.55) 0%,rgba(240,243,252,.3) 34%,rgba(240,243,252,0) 58%)}
 .ct-eb{color:var(--muted)}
@@ -614,9 +626,9 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 
 /* телефон (≤600 px): компактный текст 18 px и плотное межстрочное (решение Ольги 27.10) */
 @media(max-width:600px){
-  :root{--fs-text:18px;--fs-caption:18px}
-  body,.blk.light{font-size:18px;line-height:1.15}
-  .facts dd,.pres .plead,.pthumbs figcaption,.nf-pics figcaption,.nf-how p,.nv-card p,.ob-card p,.pr-desc,.pr-card li,.pr-info p,.faq-list .ans,.ct-pl div,.ft-note,.ft a,.mp-t,.mp-d,.sv-pan p,.revs .hint2,.hero-text p{font-size:18px!important;line-height:1.15!important}
+  :root{--fs-text:19px;--fs-caption:19px}
+  body,.blk.light{font-size:19px;line-height:1.15}
+  .facts dd,.pres .plead,.pthumbs figcaption,.nf-pics figcaption,.nf-how p,.nv-card p,.ob-card p,.pr-desc,.pr-card li,.pr-info p,.faq-list .ans,.ct-pl div,.ft-note,.ft a,.mp-t,.mp-d,.sv-pan p,.revs .hint2,.hero-text p{font-size:19px!important;line-height:1.15!important}
   .nv-card h4,.om-it h3,.ob-num{line-height:1.15!important}
   .blk h2{line-height:1.05!important}
   .blk .sub2,.cases .sit,.case h3,.part h3,.nf-series h3,.nf-revs h3,.nv-how h3,.ob-card h3,.pr-card h3,.sv-list .t,.sv-pan h3,.ft-name,.faq-list summary,.om-t .om-key{line-height:1.08!important}
@@ -653,9 +665,9 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 
 /* телефон лёжа (низкое окно): те же 18 px, плотное межстрочное и меньшие кнопки, что и на вертикальном телефоне */
 @media(max-height:500px) and (orientation:landscape) and (max-width:1000px){
-  :root{--fs-text:18px;--fs-caption:18px}
-  body,.blk.light{font-size:18px;line-height:1.15}
-  .facts dd,.pres .plead,.pthumbs figcaption,.nf-pics figcaption,.nf-how p,.nv-card p,.ob-card p,.pr-desc,.pr-card li,.pr-info p,.faq-list .ans,.ct-pl div,.ft-note,.ft a,.mp-t,.mp-d,.sv-pan p,.revs .hint2,.hero-text p{font-size:18px!important;line-height:1.15!important}
+  :root{--fs-text:19px;--fs-caption:19px}
+  body,.blk.light{font-size:19px;line-height:1.15}
+  .facts dd,.pres .plead,.pthumbs figcaption,.nf-pics figcaption,.nf-how p,.nv-card p,.ob-card p,.pr-desc,.pr-card li,.pr-info p,.faq-list .ans,.ct-pl div,.ft-note,.ft a,.mp-t,.mp-d,.sv-pan p,.revs .hint2,.hero-text p{font-size:19px!important;line-height:1.15!important}
   .nv-card h4,.om-it h3,.ob-num{line-height:1.15!important}
   .blk h2{line-height:1.05!important}
   .blk .sub2,.cases .sit,.case h3,.part h3,.nf-series h3,.nf-revs h3,.nv-how h3,.ob-card h3,.pr-card h3,.sv-list .t,.sv-pan h3,.ft-name,.faq-list summary,.om-t .om-key{line-height:1.08!important}
@@ -677,15 +689,60 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 
 /* кнопки «Обсудить проект» под подразделами портфолио — по центру блока */
 .blk.light .row.sub-cta{justify-content:center}
+
+/* LIVE: воздух вокруг плашки */
+.case .label .live{margin-left:20px;margin-top:8px;margin-bottom:6px}
+@media(max-width:600px){.case .label .live{display:flex;width:max-content;margin:12px 0 4px}}
+
+/* мобильное меню: кружок с тремя полосками (планшеты и телефоны, вертикально и горизонтально) */
+.burger,.mm{display:none}
+@media(max-width:1180px){
+  .top nav{display:none}
+  .top{margin-right:72px!important}
+  .burger{display:flex;position:fixed;top:24px;right:12px;z-index:900;width:48px;height:48px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:linear-gradient(180deg,#3A47A8,#242F7E);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 20px -6px rgba(10,16,48,.6);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;-webkit-tap-highlight-color:transparent}
+  .burger i{display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .25s,opacity .2s}
+  .burger[aria-expanded=true] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded=true] i:nth-child(2){opacity:0}
+  .burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mm{display:block;position:fixed;inset:0;z-index:890;background:rgba(10,16,48,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s}
+  .mm.open{opacity:1;visibility:visible}
+  .mm-p{position:absolute;top:12px;right:12px;width:min(calc(100vw - 24px),380px);max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:auto;box-sizing:border-box;border-radius:28px;padding:84px 26px 26px;background:var(--dark-bg);border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+  .mm-p a.l{display:block;padding:12px 0;font:600 22px "Ysabeau Infant",sans-serif;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid rgba(251,193,59,.35)}
+  .mm-p .btn{display:flex;margin-top:22px}
+  .mm-p .btn .track,.mm-p .btn .fill{width:100%;justify-content:center}
+}
+@media(max-width:600px){.burger{top:20px}}
+@media(max-height:500px) and (max-width:1180px){
+  .burger{top:16px}
+  .mm-p{padding:62px 22px 16px}
+  .mm-p a.l{padding:5px 0;font-size:19px}
+  .mm-p .btn{margin-top:12px}
+}
+
+/* «Открыть сайт» — под экраном компьютера (ПК), на узких экранах под переключателем устройств */
+.ad-go{margin-top:20px}
+@media(max-width:860px){.ad-go{display:flex;justify-content:center;margin-top:18px}}
+@media(min-width:1280px){
+  .shots.ad{container-type:inline-size;padding-bottom:28px}
+  .ad-go{position:absolute;left:0;top:calc(100cqw / 1.34);transform:translateY(-100%);margin:0;z-index:5}
+}
+@media(min-width:1280px) and (max-width:1399px){
+  .ad-go .btn .fill{height:38px;padding:0 26px;font-size:17px}
+}
 </style>
 </head>
 <body>
 
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mm"><i></i><i></i><i></i></button>
+<div class="mm" id="mm"><div class="mm-p">
+  <a class="l" href="#uslugi">Услуги</a><a class="l" href="#raboty">Портфолио</a><a class="l" href="#process">Создание сайта</a><a class="l" href="#stoimost">Стоимость</a><a class="l" href="#obo-mne">Обо мне</a><a class="l" href="#kontakty">Контакты</a>
+  <a class="btn m" href="#kontakty"><span class="track"><span class="fill">Обсудить проект</span></span></a>
+</div></div>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#"><img class="brand-logo" src="img/logo-menu.webp" alt="" width="71" height="60"><div class="brand-t"><b>Ольга Сазанова</b><span>сайты · презентации · нейровизуал</span></div></a>
+    <a class="brand" href="#"><img class="brand-logo" src="img/logo-menu.webp" alt="" width="71" height="60"><div class="brand-t"><span>сайты · презентации · нейровизуал</span></div></a>
     <nav>
-      <a href="#uslugi">Услуги</a><a href="#raboty">Работы</a><a href="#process">Как я работаю</a><a href="#stoimost">Стоимость</a><a href="#obo-mne">Обо мне</a><a href="#kontakty">Контакты</a>
+      <a href="#uslugi">Услуги</a><a href="#raboty">Портфолио</a><a href="#process">Создание сайта</a><a href="#stoimost">Стоимость</a><a href="#obo-mne">Обо мне</a><a href="#kontakty">Контакты</a>
     </nav>
     <a class="btn m sm" href="https://t.me/quercus777"><span class="track"><span class="fill"><span class="lg">Написать в&nbsp;</span>Telegram</span></span></a>
   </div>
@@ -701,7 +758,7 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
   </div></div>
   <div class="wrap">
     <div class="hero-text">
-      <div class="eyebrow">Ольга Сазанова · веб-дизайн и визуальные решения</div>
+      <div class="eyebrow">Веб-дизайн и визуальные решения</div>
       <h1>Сайты, презентации и нейровидео</h1>
       <p class="lead-big">Приходите с идеей — уходите с готовым результатом</p>
       <p class="lead">Сайты на Tilda и на коде для экспертов и малого бизнеса.</p>
@@ -753,6 +810,7 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
         <div class="ad-dev ad-pho"><img src="img/adapt-taro-tel.webp" alt="Сайт таролога на телефоне" loading="lazy"></div>
       </div>
       <div class="ad-sw" role="group" aria-label="Устройство"><button type="button" data-v="pk" aria-pressed="true">ПК</button><button type="button" data-v="pl" aria-pressed="false">Планшет</button><button type="button" data-v="tel" aria-pressed="false">Мобильный</button></div>
+    <div class="ad-go"><a class="btn s" href="https://modenova-taro.tilda.ws" target="_blank" rel="noopener"><span class="track"><span class="fill">Открыть сайт</span></span></a></div>
     </div>
     <div class="body">
       <div class="label">Проект · многостраничный сайт эксперта на Tilda<span class="live" aria-label="Действующий сайт"><i></i>LIVE</span></div>
@@ -768,7 +826,6 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
           <a href="img/otzyv-taro-elena-2.webp" target="_blank" rel="noopener"><img src="img/otzyv-taro-elena-2.webp" alt="Отзыв Елены Моденовой, скриншот отзыва" loading="lazy"></a>
         </div>
       </div>
-      <div class="row"><a class="btn s" href="https://modenova-taro.tilda.ws" target="_blank" rel="noopener"><span class="track"><span class="fill">Открыть сайт</span></span></a></div>
       </div>
     </div>
   </article>
@@ -781,12 +838,13 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
         <div class="ad-dev ad-pho"><img src="img/adapt-dm-tel.webp" alt="Сайт «Дед Мороз на дом» на телефоне" loading="lazy"></div>
       </div>
       <div class="ad-sw" role="group" aria-label="Устройство"><button type="button" data-v="pk" aria-pressed="true">ПК</button><button type="button" data-v="pl" aria-pressed="false">Планшет</button><button type="button" data-v="tel" aria-pressed="false">Мобильный</button></div>
+    <div class="ad-go"><a class="btn s" href="https://dedmoroz-vizit.tilda.ws" target="_blank" rel="noopener"><span class="track"><span class="fill">Открыть сайт</span></span></a></div>
     </div>
     <div class="body">
       <div class="label">Проект · сайт-визитка на Tilda<span class="live" aria-label="Действующий сайт"><i></i>LIVE</span></div>
       <h3>«Дед Мороз на дом»</h3>
-      <dl class="facts"><div><dt>Задача</dt><dd>Цифровая визитка для эксперта по детским праздникам: вызвать доверие у родителей и упростить заказ услуги.</dd></div><div><dt>Исходные данные</dt><dd>Заказчица передала только факты: тарифы и программы поздравлений. Концепцию, структуру, тексты и визуал я разработала с нуля.</dd></div><div><dt>Моя работа</dt><dd>Эмоциональный оффер и прозрачные тарифы, уникальные иллюстрации (ChatGPT), тексты (Perplexity), сборка и адаптация на Tilda: родители заказывают с телефона.</dd></div><div><dt>Результат</dt><dd>Сайт используется как ссылка-визитка в чатах. По отзыву заказчицы, клиентская база расширилась, а время на общение с клиентами сократилось до минимума.</dd></div></dl>
-      <div class="tags"><span>Tilda</span><span>ChatGPT</span><span>Perplexity</span></div>
+      <dl class="facts"><div><dt>Задача</dt><dd>Цифровая визитка для эксперта по детским праздникам: вызвать доверие у родителей и упростить заказ услуги.</dd></div><div><dt>Исходные данные</dt><dd>Заказчица передала только факты: тарифы и программы поздравлений. Концепцию, структуру, тексты и визуал я разработала с нуля.</dd></div><div><dt>Моя работа</dt><dd>Эмоциональный оффер и прозрачные тарифы, уникальные ИИ-иллюстрации, созданные специально для сайта, тексты, сборка и адаптация на Tilda: родители заказывают с телефона.</dd></div><div><dt>Результат</dt><dd>Сайт используется как ссылка-визитка в чатах. По отзыву заказчицы, клиентская база расширилась, а время на общение с клиентами сократилось до минимума.</dd></div></dl>
+      <div class="tags"><span>Tilda</span><span>ИИ-иллюстрации</span><span>Копирайтинг</span></div>
       <div class="revrow">
       <div class="revs">
         <div class="cap2">Отзыв заказчицы</div>
@@ -795,7 +853,6 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
         <a class="frag" href="img/otzyv-dm-2-orig.webp" target="_blank" rel="noopener"><img src="img/otzyv-dm-frag-2.webp" alt="Фрагмент отзыва заказчицы: клиентская база расширилась, время на общение сократилось до минимума" loading="lazy"></a>
         <div class="hint3">Читать отзыв целиком: <a href="img/otzyv-dm-1-orig.webp" target="_blank" rel="noopener">часть 1</a> · <a href="img/otzyv-dm-2-orig.webp" target="_blank" rel="noopener">часть 2</a></div>
       </div>
-      <div class="row"><a class="btn s" href="https://dedmoroz-vizit.tilda.ws" target="_blank" rel="noopener"><span class="track"><span class="fill">Открыть сайт</span></span></a></div>
       </div>
     </div>
   </article>
@@ -806,17 +863,17 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
     <div class="shots ad">
       <div class="ad-stage" data-view="pk">
         <div class="ad-dev ad-mon"><img src="img/adapt-gd-pk.webp" alt="Сайт «Граница добра» на компьютере" loading="lazy"></div>
-        <div class="ad-dev ad-tab"><img src="img/adapt-gd-pl.webp" alt="Сайт «Граница добра» на планшете" loading="lazy"></div>
+        <div class="ad-dev ad-tab"><img src="img/adapt-gd-pl-2.webp" alt="Сайт «Граница добра» на планшете" loading="lazy"></div>
         <div class="ad-dev ad-pho"><img src="img/adapt-gd-tel.webp" alt="Сайт «Граница добра» на телефоне" loading="lazy"></div>
       </div>
       <div class="ad-sw" role="group" aria-label="Устройство"><button type="button" data-v="pk" aria-pressed="true">ПК</button><button type="button" data-v="pl" aria-pressed="false">Планшет</button><button type="button" data-v="tel" aria-pressed="false">Мобильный</button></div>
+    <div class="ad-go"><a class="btn s" href="https://quercus768-cmyk.github.io/granitsa-dobra/" target="_blank" rel="noopener"><span class="track"><span class="fill">Открыть сайт</span></span></a></div>
     </div>
     <div class="body">
       <div class="label">Благотворительный проект · сайт для волонтёра<span class="live" aria-label="Действующий сайт"><i></i>LIVE</span></div>
       <h3>«Граница добра»: сайт семейной опеки над животными</h3>
       <dl class="facts"><div><dt>Задача</dt><dd>Волонтёр давно хотела собрать историю всех подопечных в одном месте, чтобы она была под рукой, а не терялась в ленте ВК. Сайт должен за полминуты объяснять новому человеку, кто стоит за проектом и почему ему можно доверять, и знакомить с каждым подопечным по имени. Сборы остаются в сообществе проекта в ВК, сайт ведёт туда.</dd></div><div><dt>Исходные данные</dt><dd>Материалы из сообщества волонтёра в ВК и в мессенджере MAX: фото и короткие видео подопечных, рассказы об их жизни. Плюс анализ аудитории проекта.</dd></div><div><dt>Моя работа</dt><dd>Разобрала, какие вопросы у разных посетителей: кто хочет помочь, кто сомневается, кто ищет питомца. По этим вопросам выстроила структуру страницы: от эмоции к доверию и действию. Написала текстовый прототип: тексты от первого лица хозяйки проекта, единые правила языка, карточки подопечных, истории со счастливым продолжением, ответы на частые вопросы. Каталог устроен так, что подопечных можно добавлять без правки кода. Сайт собрала на коде.</dd></div><div><dt>Результат</dt><dd>Сайт выложен и открывается по ссылке. История подопечных теперь собрана в одном месте: у каждого есть карточка с фото и рассказом.</dd></div></dl>
       <div class="tags"><span>Сайт на коде</span><span>Структура</span><span>Копирайтинг</span></div>
-      <div class="row"><a class="btn s" href="https://quercus768-cmyk.github.io/granitsa-dobra/" target="_blank" rel="noopener"><span class="track"><span class="fill">Открыть сайт</span></span></a></div>
     </div>
   </article>
 
@@ -864,7 +921,7 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
     <div><div class="label">Часть 2</div><h3>К лаборатории</h3><p>Как из газа слой за слоем растёт кристалл и чем лабораторный алмаз отличается от природного.</p><p class="part-note">На слайде «СВЧ-реактор: здесь растут алмазы» представлены реальные фото из лаборатории.</p></div>
     <div class="pthumbs"><figure><div class="pimg zoom" data-big="img/prez-s14-big.webp" tabindex="0" role="button" aria-label="Увеличить слайд 14"><img src="img/prez-s14-vz.webp" alt="Слайд 14: Рост алмаза: слой за слоем" loading="lazy" draggable="false"><span class="zm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5M10.5 8v5M8 10.5h5"/></svg></span></div><figcaption><b>14</b>Рост алмаза: слой за слоем</figcaption></figure><figure><div class="pimg zoom" data-big="img/prez-s15-big.webp" tabindex="0" role="button" aria-label="Увеличить слайд 15"><img src="img/prez-s15-vz.webp" alt="Слайд 15: СВЧ-реактор: здесь растут алмазы" loading="lazy" draggable="false"><span class="zm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5M10.5 8v5M8 10.5h5"/></svg></span></div><figcaption><b>15</b>СВЧ-реактор: здесь растут алмазы</figcaption></figure><figure><div class="pimg zoom" data-big="img/prez-s17-big.webp" tabindex="0" role="button" aria-label="Увеличить слайд 17"><img src="img/prez-s17-vz.webp" alt="Слайд 17: Как из алмаза делают бриллиант" loading="lazy" draggable="false"><span class="zm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5M10.5 8v5M8 10.5h5"/></svg></span></div><figcaption><b>17</b>Как из алмаза делают бриллиант</figcaption></figure><figure><div class="pimg zoom" data-big="img/prez-s18-big.webp" tabindex="0" role="button" aria-label="Увеличить слайд 18"><img src="img/prez-s18-vz.webp" alt="Слайд 18: Чем отличаются природные и лабораторные алмазы" loading="lazy" draggable="false"><span class="zm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5M10.5 8v5M8 10.5h5"/></svg></span></div><figcaption><b>18</b>Чем отличаются природные и лабораторные алмазы</figcaption></figure></div>
   </div>
-<div class="mp mp-2 mp-b" role="group" aria-label="Стоимость презентаций"><div class="mp-lab">Стоимость</div><div class="mp-g"><div class="mp-i"><div class="mp-top"><div class="mp-t">По материалам заказчика</div><div class="mp-d">Оформление слайда по предоставленным заказчиком тексту и изображениям.</div></div><div class="mp-p">500 ₽ / слайд</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">С созданием контента</div><div class="mp-d">Текст, иллюстрации и оформление слайда по техническому заданию заказчика.</div></div><div class="mp-p">1 000 ₽ / слайд</div></div></div></div>
+<div class="mp mp-2 mp-b" role="group" aria-label="Стоимость презентаций"><div class="mp-lab">Стоимость презентации</div><div class="mp-g"><div class="mp-i"><div class="mp-top"><div class="mp-t">По материалам заказчика</div><div class="mp-d">Оформление слайда по предоставленным заказчиком тексту и изображениям.</div></div><div class="mp-p">500 ₽ / слайд</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">С созданием контента</div><div class="mp-d">Текст, иллюстрации и оформление слайда по техническому заданию заказчика.</div></div><div class="mp-p">1 000 ₽ / слайд</div></div></div></div>
 <div class="row sub-cta"><a class="btn m" href="https://t.me/quercus777"><span class="track"><span class="fill">Обсудить проект</span></span></a></div>
   </div>
   <div class="pf-sub" id="neyrofoto">
@@ -898,7 +955,7 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
       <div><div class="nf-who">Клиент 3</div><a class="nf-shot" href="img/otz-nf-k3-2.webp" target="_blank" rel="noopener"><img src="img/otz-nf-k3-2.webp" alt="Скриншот отзыва клиента 3" loading="lazy"></a><div class="nf-how"><b>Как строилась работа</b><p>Образ задала клиентка: девушка-весна для аватарки. Чтобы попасть в нужный образ, сделала больше 30 вариантов. Готовые снимки понравились на 100%.</p></div></div>
     </div>
   </div>
-  <div class="mp mp-4 mp-b" role="group" aria-label="Стоимость нейрофотосессий"><div class="mp-lab">Стоимость</div><div class="mp-g"><div class="mp-i"><div class="mp-top"><div class="mp-t">1 образ</div></div><div class="mp-p">600 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">2 образа</div></div><div class="mp-p">1 000 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">3 образа</div></div><div class="mp-p">1 500 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Парное нейрофото (одно совместное изображение)</div></div><div class="mp-p">900 ₽</div></div></div></div>
+  <div class="mp mp-4 mp-b" role="group" aria-label="Стоимость нейрофотосессий"><div class="mp-lab">Стоимость нейрофото</div><div class="mp-g"><div class="mp-i"><div class="mp-top"><div class="mp-t">1 образ</div></div><div class="mp-p">600 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">2 образа</div></div><div class="mp-p">1 000 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">3 образа</div></div><div class="mp-p">1 500 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Парное нейрофото (одно совместное изображение)</div></div><div class="mp-p">900 ₽</div></div></div></div>
   </div>
   <div class="pf-sub" id="neyrovideo">
   <span class="tab">Портфолио · Нейровидео</span>
@@ -930,16 +987,16 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
         </div>
       </div>
       <div class="nv-card nv-hero"><h4>Герои не должны меняться</h4><p>В одной из нейросетей персонажи менялись от кадра к кадру. Я сделала опорные кадры в ChatGPT: из нескольких нейросетей он лучше всех сохранил героев и космический пейзаж.</p></div>
-      <div class="nv-side"><div class="nv-card"><h4>Когда нейросеть вносит своё</h4><p>Google Veo выдал ролик с яркой актёрской игрой, но дорисовал героине второй пучок волос. На курсе по нейровидео давали приёмы, которые удерживают внешность персонажа, но при этом исчезла яркая актёрская игра: варианты получались скучными и плоскими. А мне нужно было повторить эмоции и взаимодействие героев, как у настоящих актёров, пусть и нарисованных. Попыток было много, так как при каждой генерации нейросеть ведёт себя непредсказуемо.</p></div>
+      <div class="nv-side"><div class="nv-card"><h4>Когда нейросеть вносит своё</h4><p>Google Veo выдал ролик с яркой актёрской игрой, но дорисовал героине второй пучок волос. Я применила известные приёмы, которые удерживают внешность персонажа, но вместе с ними пропадала яркая актёрская игра: варианты получались скучными и плоскими. А мне нужно было повторить эмоции и взаимодействие героев, как у настоящих актёров, пусть и нарисованных. Попыток было много, так как при каждой генерации нейросеть ведёт себя непредсказуемо.</p></div>
       <div class="nv-card"><h4>Решение, которое я нашла сама</h4><p>Я придумала разложить удачный дубль на микродействия, превратить его в текстовую «карту performance» и вернуть в новую генерацию Veo. Сцену удалось повторить почти один в один.</p></div></div>
     </div>
   </div>
-<div class="mp mp-4 mp-b" role="group" aria-label="Стоимость нейровидео"><div class="mp-lab">Стоимость</div><div class="mp-g"><div class="mp-i"><div class="mp-top"><div class="mp-t">Анимация одного изображения, 5⁠–⁠10 секунд</div></div><div class="mp-p">1 000 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Короткое нейровидео, до 15 секунд</div></div><div class="mp-p">2 500 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Сюжетное нейровидео, до 30 секунд</div></div><div class="mp-p">4 500 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Сюжетное нейровидео, до 60 секунд</div></div><div class="mp-p">9 000 ₽</div></div></div></div>
+<div class="mp mp-4 mp-b" role="group" aria-label="Стоимость нейровидео"><div class="mp-lab">Стоимость нейровидео</div><div class="mp-g"><div class="mp-i"><div class="mp-top"><div class="mp-t">Анимация одного изображения, 5⁠–⁠10 секунд</div></div><div class="mp-p">1 000 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Короткое нейровидео, до 15 секунд</div></div><div class="mp-p">2 500 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Сюжетное нейровидео, до 30 секунд</div></div><div class="mp-p">4 500 ₽</div></div><div class="mp-i"><div class="mp-top"><div class="mp-t">Сюжетное нейровидео, до 60 секунд</div></div><div class="mp-p">9 000 ₽</div></div></div></div>
 <div class="row sub-cta"><a class="btn m" href="https://t.me/quercus777"><span class="track"><span class="fill">Обсудить проект</span></span></a></div>
   </div>
 </section>
 <section class="blk dark" id="process">
-  <span class="ob-label">Как я работаю</span>
+  <span class="ob-label">Создание сайта</span>
   <h2>От идеи до готового сайта</h2>
   <p class="sub ob-lead">Восемь шагов: на каждом вы знаете, что происходит и что дальше. Предоплата — когда вы уже увидели варианты первого экрана, остаток — при передаче сайта.</p>
 
@@ -949,11 +1006,11 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
     <article class="ob-glass ob-card ob-w8"><span class="ob-orb"></span><div class="ob-num">03</div><h3>Аналитика и структура</h3><p>Раскрываю практическую и эмоциональную ценность продукта, выявляю убедительные отличия от конкурентов. Формулирую ключевое предложение и выстраиваю структуру сайта, которая помогает посетителю принять решение.</p><div class="ob-tags"><span class="ob-tag">Ценность</span><span class="ob-tag">Преимущества</span><span class="ob-tag">Структура</span></div></article>
 
     <article class="ob-glass ob-card ob-wide ob-pivot"><div class="ob-num">04</div><span class="ob-pay">Предоплата 50%</span><h3>3 варианта первого экрана</h3><p>До предоплаты показываю три варианта первого экрана. Вы выбираете подходящий, мы согласовываем детали — и я приступаю к разработке сайта.</p>
-      <div class="ob-mini"><img class="ob-shot" src="img/ekran-variant-1.webp" alt="Вариант 1"><img class="ob-shot" src="img/ekran-variant-2.webp" alt="Вариант 2"><img class="ob-shot" src="img/ekran-variant-3.webp" alt="Вариант 3"></div></article>
+      <div class="ob-mini"><img class="ob-shot" loading="lazy" src="img/ekran-variant-1.webp" alt="Вариант 1"><img class="ob-shot" loading="lazy" src="img/ekran-variant-2.webp" alt="Вариант 2"><img class="ob-shot" loading="lazy" src="img/ekran-variant-3.webp" alt="Вариант 3"></div></article>
     <article class="ob-glass ob-card ob-w9"><span class="ob-orb"></span><div class="ob-num">05</div><h3>Пишу тексты</h3><p>Создаю продающие тексты для всех экранов сайта: раскрываю ценность вашего предложения, подчёркиваю преимущества и помогаю посетителю принять решение о покупке или обращении.</p></article>
 
-    <article class="ob-glass ob-card ob-w15"><span class="ob-orb"></span><div class="ob-num">06</div><h3>Сборка сайта</h3><p>Создаю остальные экраны в выбранном стиле, подбираю и разрабатываю необходимые изображения, собираю сайт на Tilda или кодом. Показываю промежуточные результаты и учитываю согласованные замечания.</p></article>
-    <article class="ob-glass ob-card ob-w15"><span class="ob-orb"></span><div class="ob-num">07</div><h3>Адаптация и техническая настройка</h3><p>Делаю адаптацию под мобильные устройства, настраиваю приём заявок, аналитику и базовую SEO-настройку. Проверяю работу сайта перед запуском.</p></article>
+    <article class="ob-glass ob-card ob-w15"><span class="ob-orb"></span><div class="ob-num">06</div><h3>Сборка сайта</h3><p>Создаю остальные экраны в выбранном стиле, подбираю или создаю необходимые изображения, собираю сайт на Tilda или кодом. Показываю промежуточные результаты и учитываю согласованные замечания.</p></article>
+    <article class="ob-glass ob-card ob-w15"><span class="ob-orb"></span><div class="ob-num">07</div><h3>Адаптация и техническая настройка</h3><p>Делаю адаптацию под мобильные устройства, настраиваю приём заявок, аналитику и базовую SEO-настройку.</p></article>
 
     <article class="ob-glass ob-card ob-w12 ob-pivot"><div class="ob-num">08</div><h3>Запуск и передача сайта</h3><p>После согласования готового сайта и окончательной оплаты запускаю его и передаю вам доступы.</p><span class="ob-pay ob-pay-b">Оставшиеся 50%</span></article>
   </div>
@@ -969,7 +1026,7 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 <article class="pr-card"><div class="pr-top"><span class="pr-lab">02 / ОДИН ПРОДУКТ ИЛИ УСЛУГА</span><span class="pr-time"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>10–15 рабочих дней</span></div><h3>Продающий лендинг</h3><p class="pr-desc">Одностраничный сайт для продвижения одного продукта или услуги. Раскроет ценность предложения, покажет преимущества и поможет посетителю принять решение об обращении или заказе.</p><div class="pr-price"><a href="#kontakty" title="Перейти к контактам">от 30 000 ₽</a></div><div class="pr-list"><h4>Что входит в стоимость</h4><ul><li>Анализ продукта, аудитории и конкурентов.</li><li>Проработка мотивов выбора и возможных сомнений покупателей.</li><li>Продающая структура до 8 смысловых экранов.</li><li>Заголовки и тексты с последовательной аргументацией.</li></ul></div></article>
 <article class="pr-card"><div class="pr-top"><span class="pr-lab">03 / НЕСКОЛЬКО УСЛУГ</span><span class="pr-time"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>20–25 рабочих дней</span></div><h3>Лендинг с большим объёмом информации</h3><p class="pr-desc">Для экспертов и бизнеса с несколькими услугами или направлениями. Поможет представить большой объём материалов в понятной структуре.</p><div class="pr-price"><a href="#kontakty" title="Перейти к контактам">от 45 000 ₽</a></div><div class="pr-list"><h4>Что входит в стоимость</h4><ul><li>Анализ аудитории, услуг и согласованного объёма материалов.</li><li>Систематизация информации, выделение главного.</li><li>Разработка структуры из 12–15 смысловых блоков.</li><li>Продающие тексты и представление нескольких услуг или направлений.</li></ul></div></article>
 <article class="pr-card"><div class="pr-top"><span class="pr-lab">04 / НЕСКОЛЬКО СТРАНИЦ</span><span class="pr-time"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>30 рабочих дней</span></div><h3>Многостраничный сайт</h3><p class="pr-desc">Для экспертов и компаний с несколькими направлениями деятельности. Поможет организовать услуги и информацию на отдельных страницах, чтобы посетители могли подробно знакомиться с предложениями и удобно переходить между разделами.</p><div class="pr-price"><a href="#kontakty" title="Перейти к контактам">от 70 000 ₽</a></div><div class="pr-list"><h4>Что входит в стоимость</h4><ul><li>Анализ направлений бизнеса и структуры сайта.</li><li>Разработка системы разделов и навигации.</li><li>До 5 страниц, по 5–7 смысловых экранов на каждой.</li><li>Структура, заголовки и необходимые тексты для страниц.</li></ul></div></article>
-<article class="pr-card pr-info"><h3>В стоимость каждого сайта входит</h3><ul><li>Дизайн и сборка сайта.</li><li>Подбор или создание изображений под стиль сайта.</li><li>Три варианта индивидуального оформления первого экрана на выбор.</li><li>Мобильная адаптация. Подготовлю сайт для удобного просмотра на мобильных устройствах.</li><li>Настройка форм и приёма заявок.</li><li>Подключение Яндекс Метрики с настройкой целей.</li><li>Подключение Яндекс Вебмастера и базовая SEO-настройка.</li><li>Проверка, запуск сайта и передача доступов.</li></ul></article>
+<article class="pr-card pr-info"><h3>В стоимость каждого сайта входит</h3><ul><li>Дизайн и сборка сайта.</li><li>Подбор или создание изображений под стиль сайта.</li><li>Три варианта индивидуального оформления первого экрана на выбор.</li><li>Мобильная адаптация.</li><li>Настройка форм и приёма заявок.</li><li>Настройка Яндекс Метрики и целей.</li><li>Базовая SEO-настройка и Вебмастер.</li><li>Проверка, запуск сайта и передача доступов.</li></ul></article>
 <article class="pr-card pr-info"><h3>От чего зависит окончательная стоимость?</h3><p>Цена зависит от объёма и сложности работ.</p><ul><li>Состав проекта, сроки и стоимость согласуем до начала разработки.</li><li>Дополнительные задачи оплачиваются отдельно.</li></ul></article>
   </div>
   <!-- кнопка и плашки цен ведут на блок «Контакты» -->
@@ -1020,12 +1077,12 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 <div class="om-top">
 <div class="om-t"><p>Создаю сайты, презентации и визуальный контент, объединяя аналитический подход и творческие решения.</p><p>У меня техническое образование и опыт работы в научно-производственном стартапе. Я привыкла разбираться в сложных задачах, находить главное и выстраивать понятную структуру.</p><p>Позже освоила веб-дизайн, графический дизайн, копирайтинг и создание визуального контента.</p>
 <p class="om-key">Мне нравится превращать разрозненные идеи и материалы в продуманные, красивые и законченные проекты.</p></div>
-<div class="om-photo"><img src="img/obo-mne-foto-kvadrat.webp" alt="Ольга Сазанова"></div></div>
+<div class="om-photo"><img loading="lazy" src="img/obo-mne-foto-kvadrat.webp" alt="Ольга Сазанова"></div></div>
 <div class="om-four">
-<div class="om-it"><img src="img/obo-il-lupa-2.webp" alt=""><div><h3>Сначала разобраться — потом создавать</h3><p>Изучаю задачу, продукт и его покупателей, выясняю, что для них важно. На этой основе продумываю содержание и подачу информации, чтобы дизайн не просто привлекал внимание, а помогал раскрыть ценность предложения.</p></div></div>
-<div class="om-it"><img src="img/obo-il-tekhnika-2.webp" alt=""><div><h3>Техническая база + творческие навыки</h3><p>Системный подход помогает мне работать с информацией и находить обоснованные решения. А навыки веб-дизайна, графического дизайна и создания визуального контента позволяют воплощать идеи в выразительных и гармоничных проектах.</p></div></div>
-<div class="om-it"><img src="img/obo-il-sayt-2.webp" alt=""><div><h3>Содержание и дизайн — в одних руках</h3><p>Работаю не только с визуалом, но и с содержанием: выстраиваю структуру, пишу тексты, подбираю изображения и объединяю всё в цельную композицию.</p></div></div>
-<div class="om-it"><img src="img/obo-il-galochka-2.webp" alt=""><div><h3>Внимание к деталям и результату</h3><p>Мне важно, чтобы итоговая работа соответствовала задаче и ожиданиям заказчика. Поэтому внимательно отношусь к пожеланиям, проверяю детали и дорабатываю решение в рамках согласованного проекта.</p></div></div>
+<div class="om-it"><img loading="lazy" src="img/obo-il-lupa-2.webp" alt=""><div><h3>Сначала разобраться — потом создавать</h3><p>Изучаю задачу, продукт и его покупателей, выясняю, что для них важно. На этой основе продумываю содержание и подачу информации, чтобы дизайн не просто привлекал внимание, а помогал раскрыть ценность предложения.</p></div></div>
+<div class="om-it"><img loading="lazy" src="img/obo-il-tekhnika-2.webp" alt=""><div><h3>Техническая база + творческие навыки</h3><p>Системный подход помогает мне работать с информацией и находить обоснованные решения. А навыки веб-дизайна, графического дизайна и создания визуального контента позволяют воплощать идеи в выразительных и гармоничных проектах.</p></div></div>
+<div class="om-it"><img loading="lazy" src="img/obo-il-sayt-2.webp" alt=""><div><h3>Содержание и дизайн — в одних руках</h3><p>Работаю не только с визуалом, но и с содержанием: выстраиваю структуру, пишу тексты, подбираю изображения и объединяю всё в цельную композицию.</p></div></div>
+<div class="om-it"><img loading="lazy" src="img/obo-il-galochka-2.webp" alt=""><div><h3>Внимание к деталям и результату</h3><p>Мне важно, чтобы итоговая работа соответствовала задаче и ожиданиям заказчика. Поэтому внимательно отношусь к пожеланиям, проверяю детали и дорабатываю решение в рамках согласованного проекта.</p></div></div>
 </div>
 <div class="om-cta"><a class="btn m" href="#kontakty"><span class="track"><span class="fill">Обсудить проект</span></span></a></div>
 </section>
@@ -1036,8 +1093,8 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 <div class="ct-cta"><a class="btn m" href="https://t.me/quercus777"><span class="track"><span class="fill">Обсудить проект</span></span></a></div></div></section>
 <footer class="ft" id="podval">
   <div class="ft-grid">
-    <div><span class="ft-lab">Ольга Сазанова</span><div class="ft-name">Сайты, презентации и нейровидео</div><p class="ft-note">Иллюстрации на сайте созданы мной с помощью ИИ.</p></div>
-    <div><span class="ft-lab">Разделы</span><ul class="ft-nav"><li><a href="#uslugi">Услуги</a></li><li><a href="#raboty">Работы</a></li><li><a href="#process">Как я работаю</a></li><li><a href="#stoimost">Стоимость</a></li><li><a href="#obo-mne">Обо мне</a></li><li><a href="#kontakty">Контакты</a></li></ul></div>
+    <div><div class="ft-name">Сайты, презентации и нейровидео</div><p class="ft-note">Иллюстрации на сайте созданы мной с помощью ИИ.</p></div>
+    <div><span class="ft-lab">Разделы</span><ul class="ft-nav"><li><a href="#uslugi">Услуги</a></li><li><a href="#raboty">Портфолио</a></li><li><a href="#process">Создание сайта</a></li><li><a href="#stoimost">Стоимость</a></li><li><a href="#obo-mne">Обо мне</a></li><li><a href="#kontakty">Контакты</a></li></ul></div>
     <div><span class="ft-lab">Связаться</span><div class="ft-cont"><div><span>Telegram</span><a href="https://t.me/quercus777">@quercus777</a></div><div><span>Почта</span><a href="mailto:Quercus777@yandex.ru">Quercus777@yandex.ru</a></div></div></div>
   </div>
   <div class="ft-bar"><div class="ft-copy">© Ольга Сазанова, 2026 · Самозанятая · ИНН 772509968257</div><a class="ft-up" href="#">Наверх <span aria-hidden="true">↑</span></a></div>
@@ -1076,6 +1133,59 @@ lb.addEventListener('click',function(e){if(e.target===lb)close()});
 document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(i-1);else if(e.key==='ArrowRight')show(i+1)});
 lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
 lb.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(d)>50)show(d<0?i+1:i-1)});
+})();
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('mm');
+  if(!b||!m)return;
+  function set(o){
+    m.classList.toggle('open',o);
+    b.setAttribute('aria-expanded',o?'true':'false');
+    b.setAttribute('aria-label',o?'Закрыть меню':'Открыть меню');
+    document.documentElement.style.overflow=o?'hidden':'';
+    if(o){var f=m.querySelector('a');if(f)setTimeout(function(){f.focus({preventScroll:true});},260);}
+  }
+  b.addEventListener('click',function(){set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target===m||e.target.closest('a'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open')){set(false);b.focus();}});
+  var mq=window.matchMedia('(max-width:1180px)');
+  if(mq.addEventListener)mq.addEventListener('change',function(){set(false);});
+})();
+</script>
+<script>
+/* переходы по якорям: страница длинная, картинки ниже подгружаются по ходу и сдвигают раздел — поэтому прыгаем сразу и несколько раз уточняем позицию */
+(function(){
+  var root=document.documentElement,timer=null;
+  function go(t){
+    var n=0;
+    clearTimeout(timer);
+    root.style.scrollBehavior='auto';
+    (function step(){
+      t.scrollIntoView();
+      if(++n<7){timer=setTimeout(step,250);}else{root.style.scrollBehavior='';}
+    })();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(!a)return;
+    var id=a.getAttribute('href').slice(1);
+    if(!id)return;
+    var t=document.getElementById(id);
+    if(!t)return;
+    e.preventDefault();
+    if(history.replaceState)history.replaceState(null,'','#'+id);
+    go(t);
+  });
+})();
+</script>
+<script>
+(function(){
+  var c=document.getElementById('kontakty');
+  if(!c)return;
+  function ld(){c.classList.add('ld');}
+  if(!('IntersectionObserver' in window)){ld();return;}
+  new IntersectionObserver(function(e,o){if(e[0].isIntersecting){ld();o.disconnect();}},{rootMargin:'1200px 0px'}).observe(c);
 })();
 </script>
 </body>
