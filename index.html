@@ -21,7 +21,10 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sayt-i-vizual.ru/img/og-preview.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Ysabeau+Infant:wght@400;500;600;700&family=Ysabeau+Office:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Ysabeau+Infant:wght@400;500;600;700&family=Ysabeau+Office:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Ysabeau+Infant:wght@400;500;600;700&family=Ysabeau+Office:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   /* индиго сайта */
@@ -731,6 +734,28 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
 }
 @media(min-width:1280px) and (max-width:1399px){
   .ad-go .btn .fill{height:38px;padding:0 26px;font-size:17px}
+}
+
+/* 211: mobile header keeps its contents inside at narrow widths and larger text sizes. */
+@media(max-width:1180px){
+  .top{box-sizing:border-box;width:calc(100% - 84px);max-width:calc(100% - 84px);margin-left:12px!important;margin-right:72px!important}
+  .top .wrap{min-width:0}
+  .top .brand{min-width:0;flex:1}
+  .top .brand-t{min-width:0}
+  .top>.wrap>.btn{flex:none}
+  .burger{box-sizing:border-box;right:max(12px,env(safe-area-inset-right))}
+}
+@media(max-width:600px){
+  .top{border-radius:28px}
+  .top .wrap{height:auto;min-height:64px;padding:10px 14px;gap:8px}
+  .top .brand span{overflow-wrap:anywhere}
+}
+@media(max-width:420px){
+  .top .wrap{display:grid;grid-template-columns:minmax(0,1fr);justify-items:start;gap:8px}
+  .top .brand{width:100%;box-sizing:border-box}
+  .top .brand-t{flex:1}
+  .top>.wrap>.btn{justify-self:end;max-width:100%}
+  .top .btn .fill{height:auto;min-height:32px;white-space:normal;overflow-wrap:anywhere;padding:5px 14px}
 }
 </style>
 </head>
