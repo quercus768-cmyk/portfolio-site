@@ -750,12 +750,19 @@ h1::after{content:"";display:block;width:110px;height:4px;margin-top:22px;backgr
   .top .wrap{height:auto;min-height:64px;padding:10px 14px;gap:8px}
   .top .brand span{overflow-wrap:anywhere}
 }
-@media(max-width:420px){
-  .top .wrap{display:grid;grid-template-columns:minmax(0,1fr);justify-items:start;gap:8px}
-  .top .brand{width:100%;box-sizing:border-box}
+/* 212: one row when both items fit; narrower phones keep Telegram below. */
+@media(max-width:600px){
+  .top .wrap{box-sizing:border-box;flex-wrap:wrap;padding:6px 14px}
+  .top .brand{box-sizing:border-box;flex:1 1 150px}
   .top .brand-t{flex:1}
-  .top>.wrap>.btn{justify-self:end;max-width:100%}
+  .top>.wrap>.btn{margin-left:auto;max-width:100%}
   .top .btn .fill{height:auto;min-height:32px;white-space:normal;overflow-wrap:anywhere;padding:5px 14px}
+}
+@media(min-width:381px) and (max-width:600px){
+  .top{border-radius:999px}
+}
+@media(max-width:380px){
+  .top .brand{flex-basis:100%}
 }
 </style>
 </head>
